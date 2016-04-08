@@ -10,4 +10,6 @@ testdict = {
 
 testlist = ['peanuts', testdict, 'rabbits']
 
-print testlist
+
+for l in testlist:
+    print l
