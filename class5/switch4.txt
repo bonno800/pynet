@@ -25,6 +25,7 @@ interface Vlan1
  no ip route-cache
 !
 ip default-gateway 1.1.1.254
+
 snmp-server community Kirk RO 
 !
 line con 0
