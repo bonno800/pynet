@@ -1,0 +1,30 @@
+---
+
+
+- name: create VLAN IDs and Names
+  hosts: arista
+  tasks:
+    - name: Create VLAN 867
+      eos_vlan: name=eight_six_seven vlanid=867
+            username={{ eapi_username}}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+    - name: Create VLAN 530
+      eos_vlan: name=five_three_oh vlanid=530
+            username={{ eapi_username}}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+  
+    - name: Create VLAN 9
+      eos_vlan: name=nine vlanid=9
+            username={{ eapi_username}}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
