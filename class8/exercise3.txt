@@ -7,3 +7,13 @@
 ... test_rtr1.save()
 >>> 
 
+>>> test_rtr2 = NetworkDevice.objects.get_or_create(device_name='test_rtr2',
+...                                                 device_type='cisco_ios',
+...                                                 ip_address='14.14.14.14',
+...                                                 port=8675,
+...                                                 )
+>>> 
+>>> net_devices
+[<NetworkDevice: pynet-rtr1>, <NetworkDevice: pynet-rtr2>, <NetworkDevice: pynet-sw1>, <NetworkDevice: pynet-sw2>, <NetworkDevice: pynet-sw3>, <NetworkDevice: pynet-sw4>, <NetworkDevice: juniper-srx>, <NetworkDevice: test_rtr2>]
+>>> 
+
