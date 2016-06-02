@@ -1,0 +1,40 @@
+>>> for a_device in net_devices:
+...   if 'sw' in a_device.device_name:
+...     a_device.vendor = 'Arista'
+...   a_device.save()
+>>> for a_device in net_devices:
+
+...   if 'rtr' in a_device.device_name:
+...     a_device.vendor = 'Cisco'
+...   a_device.save()
+
+>>> for a_device in net_devices:
+
+...   if 'srx' in a_device.device_name:
+
+...     a_device.vendor = 'Juniper'
+
+...   a_device.save()
+
+... 
+
+
+>>> for a_device in net_devices:
+
+...    print a_device, a_device.credentials, a_device.vendor
+
+... 
+
+pynet-rtr1 pyclass Cisco
+
+pynet-rtr2 pyclass Cisco
+
+pynet-sw1 admin1 Arista
+
+pynet-sw2 admin1 Arista
+
+pynet-sw3 admin1 Arista
+
+pynet-sw4 admin1 Arista
+
+juniper-srx pyclass Juniper
