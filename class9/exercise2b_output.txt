@@ -1,0 +1,37 @@
+
+(applied_python)[nbonifacio@ip-172-30-0-38 class9]$ pwd
+/home/nbonifacio/pynet/class9
+(applied_python)[nbonifacio@ip-172-30-0-38 class9]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+>>> dir(mytest)
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', '__path__', 'simple', 'whatever', 'world']
+>>> mytest.world.func1()
+this is func1 printing and my name is not main!
+>>> mytest.simple.func2()
+simple is what this is not and my name is not main!
+>>> mytest.whatever.func3()
+func3 inside whatever.py and we are not named main!!
+>>> quit()
+(applied_python)[nbonifacio@ip-172-30-0-38 class9]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23) 
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from mytest import world
+>>> dir(world)
+['MyClass', '__builtins__', '__doc__', '__file__', '__name__', '__package__', 'func1', 'main']
+>>> world.func1()
+this is func1 printing and my name is not main!
+>>> from mytest import simple
+>>> dir(simple)
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'func2', 'main']
+>>> simple.func2()
+simple is what this is not and my name is not main!
+>>> from mytest import whatever
+>>> dir(whatever)
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'func3', 'main']
+>>> whatever.func3()
+func3 inside whatever.py and we are not named main!!
+>>> 
