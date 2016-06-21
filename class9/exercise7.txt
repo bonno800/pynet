@@ -1,0 +1,10 @@
+>>> import sys
+
+>>> print sys.path
+['', '/home/nbonifacio/DJANGOX/djproject', '/home/nbonifacio/applied_python/local/lib64/python2.7/site-packages', '/home/nbonifacio/applied_python/local/lib/python2.7/site-packages', '/home/nbonifacio/applied_python/lib64/python2.7', '/home/nbonifacio/applied_python/lib/python2.7', '/home/nbonifacio/applied_python/lib64/python2.7/site-packages', '/home/nbonifacio/applied_python/lib/python2.7/site-packages', '/home/nbonifacio/applied_python/lib64/python2.7/lib-dynload', '/usr/lib64/python2.7', '/usr/lib/python2.7']
+
+>>> sys.path.append("/home/nbonifacio/pynet/class9")
+
+>>> print sys.path
+['', '/home/nbonifacio/DJANGOX/djproject', '/home/nbonifacio/applied_python/local/lib64/python2.7/site-packages', '/home/nbonifacio/applied_python/local/lib/python2.7/site-packages', '/home/nbonifacio/applied_python/lib64/python2.7', '/home/nbonifacio/applied_python/lib/python2.7', '/home/nbonifacio/applied_python/lib64/python2.7/site-packages', '/home/nbonifacio/applied_python/lib/python2.7/site-packages', '/home/nbonifacio/applied_python/lib64/python2.7/lib-dynload', '/usr/lib64/python2.7', '/usr/lib/python2.7', '/home/nbonifacio/pynet/class9']
+>>> 
