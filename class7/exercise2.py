@@ -2,21 +2,14 @@ import time
 from pprint import pprint
 import pyeapi
 
-pynet_sw3 = pyeapi.connect_to("pynet-sw3")
 
-
-vlans_retreive = pynet_sw3.enable("show vlan")
-
-
-vlans_list_strip = vlans_retreive[0]
-
-
-#pprint(vlans_list_strip)
-
-vlans_dict = vlans_list_strip['result']
-
-
-vlans = vlans_dict['vlans']
+if __name__=='__main__":
+   pynet_sw3 = pyeapi.connect_to("pynet-sw3")
+   vlans_retreive = pynet_sw3.enable("show vlan")
+   vlans_list_strip = vlans_retreive[0]
+   #pprint(vlans_list_strip)
+   vlans_dict = vlans_list_strip['result']
+   vlans = vlans_dict['vlans']
 
 #pprint(vlans)
 
@@ -27,32 +20,34 @@ vlans = vlans_dict['vlans']
    #   if not vlan_number in v:
     #     pynet_sw3.config(add_vlan)
  
-def rm_vlan(add_vlan):
-   if any(add_vlan[0] in s for s in add_vlan):
+def rm_vlan_func(rm_vlan):
+   if any(rm_vlan[0] in s for s in v):
       print 'VLAN exists!  Deleting now!'
-      
-   elif not add_vlan[0] in v:
-      print 'adding VLAN!'
-      pynet_sw3.config(add_vlan)
+      pynet_sw3.config(rm_vlan)
+   else:
+      print 'Error: VLAN does not exist!'
 
 
-
-def add_vlan(add_vlan):
-   if any(add_vlan[0] in s for s in add_vlan):
+def add_vlan_func(add_vlan):
+   if any(add_vlan[0] in s for s in v):
       print 'Error: VLAN exists!'
-   elif not add_vlan[0] in v:
+   else:
       print 'adding VLAN!'
       pynet_sw3.config(add_vlan)
 
-#for k, v in vlans_dict.iteritems():
- #  add_vlan(['vlan 963', 'name NICK_B'])
+pprint(vlans)
 
+for k, v in vlans.iteritems():
+   add_vlan_func(['vlan 963', 'name NICK_B'])
 
+pprint(vlans)
 
+time.sleep(3)
 
+for k, v in vlans.iteritems():
+   rm_vlan_func(['no vlan 963'])
 
-
-
+pprint(vlans)
 
 #for k, v in vlans.iteritems(): 
  #  add_vlan = ['vlan 963', 'name NICK_B']
@@ -61,9 +56,6 @@ def add_vlan(add_vlan):
    #elif not add_vlan[0] in v:
     #  print 'adding VLAN!'
      # pynet_sw3.config(add_vlan)
-
-
-
 
 #add_vlan = ['vlan 963', 'name NICK_B']
 
