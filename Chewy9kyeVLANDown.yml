@@ -1,0 +1,16 @@
+---
+- hosts: nxos
+
+  tasks:
+
+  - name: shut down SVI for vlan 111
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan111
+      admin_state: down
+      
+  - name: shut down SVI for vlan 222
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan222
+      admin_state: down

@@ -1,0 +1,16 @@
+---
+- hosts: nxos-LEAF
+
+  tasks:
+   
+  - name: Create VLANS
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan333
+      admin_state: up
+      
+  - name: Create VLANS
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan444
+      admin_state: up

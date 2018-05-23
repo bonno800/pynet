@@ -1,0 +1,13 @@
+---
+- hosts: nxos
+  connection: local
+  vars:
+    cli:
+      host: "{{ ansible_host }}"
+      username: "{{username}}"
+      password: "{{password}}"
+      transport: cli
+  tasks:
+  - name: show run
+    nxos_command:
+      commands: show version
