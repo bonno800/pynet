@@ -1,0 +1,8 @@
+>>> for a_device in net_devices:
+...    if 'pynet-sw' in a_device.device_name:
+...	  a_device.credentials = arista_creds
+...    else:
+...	  a_device.credentials = std_creds
+...    a_device.save()
+...
+

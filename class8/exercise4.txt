@@ -1,0 +1,13 @@
+>>> print NetworkDevice.objects.all()
+[<NetworkDevice: pynet-rtr1>, <NetworkDevice: pynet-rtr2>, <NetworkDevice: pynet-sw1>,
+ <NetworkDevice: pynet-sw2>, <NetworkDevice: pynet-sw3>, <NetworkDevice: pynet-sw4>,
+ <NetworkDevice: juniper-srx>, <NetworkDevice: test-rtr1>]
+
+>>> test_rtr1.delete
+
+
+>>> print NetworkDevice.objects.all()
+[<NetworkDevice: pynet-rtr1>, <NetworkDevice: pynet-rtr2>, <NetworkDevice: pynet-sw1>, 
+<NetworkDevice: pynet-sw2>, <NetworkDevice: pynet-sw3>, <NetworkDevice: pynet-sw4>, <NetworkDevice: juniper-srx>]
+
+
