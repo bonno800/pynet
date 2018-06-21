@@ -1,0 +1,304 @@
+---
+- hosts: IAD2
+
+  tasks:
+
+  - name: shut down SVI for vlan 1
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan1
+      admin_state: down
+      
+  - name: shut down SVI for vlan 12
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan12
+      admin_state: down
+      
+  - name: shut down SVI for vlan 252
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan252
+      admin_state: down
+
+  - name: shut down SVI for vlan 700
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan700
+      admin_state: down
+      
+  - name: shut down SVI for vlan 701
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan701
+      admin_state: down
+      
+  - name: shut down SVI for vlan 702
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan702
+      admin_state: down
+      
+  - name: shut down SVI for vlan 703
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan703
+      admin_state: down
+      
+  - name: shut down SVI for vlan 704
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan704
+      admin_state: down
+      
+  - name: shut down SVI for vlan 705
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan705
+      admin_state: down
+      
+  - name: shut down SVI for vlan 706
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan706
+      admin_state: down
+      
+  - name: shut down SVI for vlan 707
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan707
+      admin_state: down
+      
+  - name: shut down SVI for vlan 708
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan708
+      admin_state: down
+      
+  - name: shut down SVI for vlan 709
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan709
+      admin_state: down
+
+  - name: shut down SVI for vlan 710
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan710
+      admin_state: down
+      
+  - name: shut down SVI for vlan 1100
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan1100
+      admin_state: down
+      
+  - name: shut down SVI for vlan 1165
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan1165
+      admin_state: down
+      
+  - name: shut down SVI for vlan 1166
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan1166
+      admin_state: down
+      
+  - name: shut down SVI for vlan 1212
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan1212
+      admin_state: down
+      
+  - name: shut down SVI for vlan 2010
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan2010
+      admin_state: down
+      
+  - name: shut down SVI for vlan 2011
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan2011
+      admin_state: down
+
+  - name: shut down SVI for vlan 2012
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan2012
+      admin_state: down
+      
+  - name: shut down SVI for vlan 2013
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan2013
+      admin_state: down
+      
+  - name: shut down SVI for vlan 2020
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan2020
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3300
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3300
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3301
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3301
+      admin_state: down
+ 
+  - name: shut down SVI for vlan 3302
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3302
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3312
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3312
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3313
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3313
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3314
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3314
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3316
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3316
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3317
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3317
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3318
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3318
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3328
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3328
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3329
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3329
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3330
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3330
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3332
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3332
+      admin_state: down
+
+  - name: shut down SVI for vlan 3333
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3333
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3334
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3334
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3348
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3348
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3349
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3349
+      admin_state: down
+
+  - name: shut down SVI for vlan 3350
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan2010
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3364
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3364
+      admin_state: down
+
+  - name: shut down SVI for vlan 3365
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3365
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3366
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3366
+      admin_state: down
+
+  - name: shut down SVI for vlan 3380
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3380
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3381
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3381
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3382
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3382
+      admin_state: down
+
+  - name: shut down SVI for vlan 3396
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3396
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3397
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3397
+      admin_state: down
+      
+  - name: shut down SVI for vlan 3398
+    nxos_interface:
+      provider: "{{ nxapi }}"
+      name: Vlan3398
+      admin_state: down
