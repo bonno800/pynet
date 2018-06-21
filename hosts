@@ -1,3 +1,4 @@
+
 # This is the default ansible 'hosts' file.
 #
 # It should live in /etc/ansible/hosts
@@ -8,45 +9,38 @@
 #   - You can enter hostnames or ip addresses
 #   - A hostname/ip can be a member of multiple groups
 
-# Ex 1: Ungrouped hosts, specify before any group headers.
+[IAD1]
 
-## green.example.com
-## blue.example.com
-## 192.168.100.1
-## 192.168.100.10
+#IAD1-BGW1
+IAD1BSWG01P
+#10.1.199.115/24
 
-# Ex 2: A collection of hosts belonging to the 'webservers' group
+#IAD1-BGW2
+IAD1BSWG02P
+#10.1.199.116/24
 
-## [webservers]
-## alpha.example.org
-## beta.example.org
-## 192.168.1.100
-## 192.168.1.110
+#IAD1-Leaf1
+IAD1BSWL01P
+#10.1.199.113/24
 
-# If you have multiple hosts following a pattern you can specify
-# them like this:
+#IAD1-Leaf2
+IAD1BSWL02P
+#10.1.199.114/24
 
-## www[001:006].example.com
+[IAD2]
 
-# Ex 3: A collection of database servers in the 'dbservers' group
+#IAD2-BGW1
+IAD2BSWG01
+#10.2.199.115/24
 
-## [dbservers]
-##
-## db01.intranet.mydomain.net
-## db02.intranet.mydomain.net
-## 10.25.1.56
-## 10.25.1.57
+#IAD2-BGW2
+IAD2BSWG02P
+#10.2.199.116/24
 
-# Here's another example of host ranges, this time there are no
-# leading 0s:
+#IAD2-Leaf1
+IAD2BSWL01P
+#10.2.199.113/24
 
-
-
-
-
-[nxos]
-9KLEAFB
-## db-[99:101]-node.example.com
-
-[nxos-LEAF]
-9KLEAFB
+#IAD2-Leaf2
+IAD2BSWL02P
+#10.2.199.114/24
